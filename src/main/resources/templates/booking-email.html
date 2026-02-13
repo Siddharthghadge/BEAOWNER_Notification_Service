@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking Confirmation</title>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+<div style="max-width: 600px; margin: 0 auto; border: 1px solid #ddd; padding: 20px;">
+    <h2 style="color: #28a745;">Booking Confirmed!</h2>
+    <p>Hi <span th:text="${name}">Customer</span>,</p>
+    <p>Your booking for <strong><span th:text="${car}">Vehicle</span></strong> has been successfully confirmed.</p>
+
+    <div style="background-color: #f4f4f4; padding: 15px; border-radius: 5px; margin: 20px 0; text-align: center;">
+        <p style="margin: 0; font-size: 14px; color: #666;">Pickup Verification OTP</p>
+        <h1 style="margin: 5px 0; letter-spacing: 5px; color: #007bff;"><span th:text="${otp}">000000</span></h1>
+    </div>
+
+    <p><strong>Booking Type:</strong> <span th:text="${type}">Type</span></p>
+    <p><strong>Pickup Location:</strong> <span th:text="${location}">Location</span></p>
+    <p><strong>Owner Contact:</strong> <span th:text="${phone}">Phone</span></p>
+
+    <p style="font-size: 12px; color: #888; margin-top: 30px;">
+        Please show the above OTP to the owner at the time of vehicle handover.
+    </p>
+</div>
+</body>
+</html>

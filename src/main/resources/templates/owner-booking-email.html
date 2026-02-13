@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New Booking Received</title>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+<div style="max-width: 600px; margin: 0 auto; border: 1px solid #ddd; padding: 20px;">
+    <h2 style="color: #007bff;">New Booking Received</h2>
+
+    <p>Hello,</p>
+
+    <p>You have received a new booking for your vehicle:</p>
+
+    <p><strong>Vehicle:</strong> <span th:text="${car}">Vehicle</span></p>
+    <p><strong>Booking Type:</strong> <span th:text="${type}">Type</span></p>
+    <p><strong>Pickup Location:</strong> <span th:text="${location}">Location</span></p>
+
+    <p><strong>Customer Name:</strong>
+        <span th:text="${customerName}">Customer</span>
+    </p>
+
+    <p style="font-size: 13px; color: #666; margin-top: 25px;">
+        Please ensure vehicle availability as per booking details.
+        No OTP verification is required for this email.
+    </p>
+</div>
+</body>
+</html>
